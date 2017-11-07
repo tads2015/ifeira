@@ -61,6 +61,7 @@ export class UserService {
       console.log("INSERT RESULT", id);
   }, error => {
       console.log("INSERT ERROR", error);
+      console.log("Esse é um teste");
   });
   }
 }
