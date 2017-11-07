@@ -1,0 +1,25 @@
+<ActionBar title="IFeira" class="action-bar"></ActionBar>
+<StackLayout verticalAlignment="center">
+    
+    <Label class="locais" text="Locais de Entrega: " ></Label>
+
+    <ListView >
+        <ng-template let-item="item">
+          
+            <GridLayout columns="*, auto">
+                <Label col="0" class="medium-spacing"></Label>
+                <StackLayout col="1" class="delete-container" >
+                    
+                </StackLayout>
+              </GridLayout>
+         <!-- <Label [text]="item.name" class="medium-spacing"></Label>
+          <Image src="res://delete"></Image>
+         -->
+      </ng-template>
+    </ListView>
+
+    <Button horizontalAlignment="right" [nsRouterLink]="['/cadLocalEntrega']" text="&#xf067;" class="fa mais" (tap)="proximo()"></Button>
+    
+    <Button text="Concluir" class="proximo" (tap)="proximo()"></Button>
+  
+</StackLayout>
