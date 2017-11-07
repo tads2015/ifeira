@@ -1,3 +1,4 @@
+//Servisso para conexão com back-ending.
 import { Injectable } from "@angular/core";
 import { Http, Headers, Response } from "@angular/http";
 import { Observable } from "rxjs/Rx";
@@ -12,7 +13,7 @@ import { Config } from "../config";
 export class UserService {
 
   private database: any;
-
+  
   constructor(private http: Http){
     (new Sqlite("ifeira.db")).then(db => {
         db.execSQL("CREATE TABLE IF NOT EXISTS usuario (id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT)").then(id => {
@@ -24,7 +25,7 @@ export class UserService {
         console.log("OPEN DB ERROR", error);
     });
   }
-
+  //Login envia em jason o usuario e recebe a resposta em jason do back-ending
   login(user: User) {
     let headers = new Headers();
 
@@ -41,7 +42,7 @@ export class UserService {
     })
     .catch(this.handleErrors);
   }
-
+  //Tratamento de erros.
   handleErrors(error: Response) {
     console.log("erro");
     console.log(JSON.stringify(error.json()));

@@ -1,3 +1,4 @@
+//Componente de login.
 import { Component } from "@angular/core";
 import { Page } from "ui/page";
 import { Router } from "@angular/router";
@@ -12,13 +13,15 @@ import { UserService } from "../../shared/user/user.service";
   styleUrls: ["pages/login/login.css"]
 })
 export class LoginComponent {
+  //declara objeto user.
   user: User;
+  //Constructor starta a tela principal de login
 
   constructor(private userService: UserService, private page: Page, private router: Router) {
     this.user = new User();
     page.backgroundImage = "res://bg_app";
   }
-
+  //Executa a função de validação de usuario dentro do user.service.ts
   login() {
     this.userService.login(this.user)
     .subscribe(
