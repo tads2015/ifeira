@@ -15,7 +15,6 @@ export class UserService {
 
   constructor(private http: Http){
     (new Sqlite("ifeira.db")).then(db => {
-        // teste github
         db.execSQL("CREATE TABLE IF NOT EXISTS usuario (id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT)").then(id => {
             this.database = db;
         }, error => {
