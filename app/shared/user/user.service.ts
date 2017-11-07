@@ -15,8 +15,6 @@ export class UserService {
 
   constructor(private http: Http){
     (new Sqlite("ifeira.db")).then(db => {
-        // Mais um teste
-        // Testeeeeeeeeeeeeeeeeeee
         db.execSQL("CREATE TABLE IF NOT EXISTS usuario (id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT)").then(id => {
             this.database = db;
         }, error => {
@@ -29,7 +27,6 @@ export class UserService {
 
   login(user: User) {
     let headers = new Headers();
-    // Teste
 
     headers.append("Content-Type", "application/json");
 
@@ -51,17 +48,12 @@ export class UserService {
     return Observable.throw(error);
   }
 
-  /* Esse é um teste
-  Eu estou fazendo testes
-  */
-
   saveToken(token: String){
     console.log(token);
     this.database.execSQL("INSERT INTO usuario (token) VALUES (?)", [token]).then(id => {
       console.log("INSERT RESULT", id);
   }, error => {
       console.log("INSERT ERROR", error);
-      console.log("Esse é um teste");
   });
   }
 }
