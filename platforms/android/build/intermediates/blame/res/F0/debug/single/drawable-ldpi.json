@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-ldpi\\background.png",
+        "source": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\src\\main\\res\\drawable-ldpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-ldpi\\bg_app.png",
+        "source": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\src\\main\\res\\drawable-ldpi\\bg_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-ldpi\\logo.png",
+        "source": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\src\\main\\res\\drawable-ldpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\drawable-ldpi\\icon.png",
+        "source": "C:\\Users\\Lssan\\IFeira\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon.png"
+    }
+]
