@@ -1,8 +1,3 @@
-hooks/
+/hooks
 
-node_modules/
-
-platforms/
-
-.json
-
+/node_modules
