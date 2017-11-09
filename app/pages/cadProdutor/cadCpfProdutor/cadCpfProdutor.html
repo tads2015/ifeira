@@ -1,8 +1,9 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
 <StackLayout verticalAlignment="center">
-  <StackLayout orientation="horizontal">
-    <Button text="Cliente" class="proximo" (tap)="proximo()"></Button>
-  
-    <Button text="Produtor" [nsRouterLink]="['/cadDadosProdutor']" class="proximo" (tap)="proximo()"></Button>
-  </StackLayout>
+    
+<StackLayout orientation="horizontal">
+  <Button text="Cliente" class="proximo" (tap)="proximo()"></Button>
+  <Button text="Próximo" [nsRouterLink]="['/cadDadosProdutor']" class="proximo" (tap)="proximo()"></Button>
+</StackLayout>
+
 </StackLayout>
