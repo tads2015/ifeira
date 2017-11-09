@@ -10,7 +10,7 @@ import {Page} from "ui/page";
 export class CadLocalEntregaComponent {
 
   constructor(page: Page) {
-    page.backgroundImage = "~/images/fundo_app.jpeg";
+    page.backgroundImage = "res://bg_app";
   }
 
   proximo(){
