@@ -3,3 +3,7 @@ hooks/**/*
 node_modules/**/*
 
 platforms/**/*
+
+package.json
+
+tsconfig.json
