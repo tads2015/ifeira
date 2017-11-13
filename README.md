@@ -1,8 +1,8 @@
 # ifeira
 
-Após a criação do projeto em suas máquinas, para funcionar corretamente, é necessário adicionar todos os plugins que serão usados pelo terminal.
+Apï¿½s a criaï¿½ï¿½o do projeto em suas mï¿½quinas, para funcionar corretamente, ï¿½ necessï¿½rio adicionar todos os plugins que serï¿½o usados pelo terminal.
 
-O primeiro é o SQLite. Para isso, execute: 
+O primeiro ï¿½ o SQLite. Para isso, execute: 
 
-`tns plugin add nativescript-sqlite`
-`tns plugin add nativescript-masked-text-field`
+`tns plugin add nativescript-sqlite` -> https://github.com/NathanaelA/nativescript-sqlite
+`tns plugin add nativescript-masked-text-field` -> https://github.com/PeterStaev/nativescript-masked-text-field
