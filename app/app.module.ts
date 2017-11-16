@@ -9,13 +9,17 @@ import { AppComponent } from "./app.component";
 //Import das rotas do aplicativo
 import { routes, navigatableComponents } from "./app.routing";
 
+//import mascara
+import { MaskedTextFieldModule } from "nativescript-masked-text-field/angular";
+
 @NgModule({
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
     NativeScriptHttpModule,
     NativeScriptRouterModule,
-    NativeScriptRouterModule.forRoot(routes)
+    NativeScriptRouterModule.forRoot(routes),
+    MaskedTextFieldModule,
   ],
   declarations: [
     AppComponent,
