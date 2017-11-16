@@ -14,8 +14,7 @@ export class LocaisEntregaComponent {
   }
 
   proximo(){
-
   }
 
-  }
+}
 
