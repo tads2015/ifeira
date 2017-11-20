@@ -8,7 +8,6 @@ import {CadEnderecoProdutorComponent} from "./pages/cadProdutor/Endereco/cadEnde
 import {CadLocalEntregaComponent} from "./pages/cadProdutor/cadLocalEntrega/cadLocalEntrega.component";
 import {LocaisEntregaComponent} from "./pages/cadProdutor/locaisEntrega/locaisEntrega.component";
 
-
 export const routes = [
   //Path vazio para que a primeira pagina utilize LoginComponent.
  // { path: "", component: LoginComponent },
@@ -20,7 +19,7 @@ export const routes = [
   { path: "cadLocalEntrega", component: CadLocalEntregaComponent},
   { path: "locaisEntrega", component: LocaisEntregaComponent},
 
-  { path:"", component: CadLocalEntregaComponent}
+  { path:"", component: LocaisEntregaComponent}
 
   
 ];

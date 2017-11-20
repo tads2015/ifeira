@@ -11,9 +11,11 @@ import { routes, navigatableComponents } from "./app.routing";
 
 //import mascara
 import { MaskedTextFieldModule } from "nativescript-masked-text-field/angular";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   imports: [
+    ReactiveFormsModule,
     NativeScriptModule,
     NativeScriptFormsModule,
     NativeScriptHttpModule,

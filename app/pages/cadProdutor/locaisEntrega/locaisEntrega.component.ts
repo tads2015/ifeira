@@ -9,9 +9,9 @@ import {Endereco} from "../../../shared/user/endereco";
 })
 
 export class LocaisEntregaComponent {
-  enderecos: Endereco[];
+  
   constructor(page: Page) {
-
+    
     page.backgroundImage = "res://bg_app";
   }
 
