@@ -9,7 +9,9 @@ import {Endereco} from "../../../shared/user/endereco";
 })
 
 export class LocaisEntregaComponent {
-  
+
+  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  batata = "Concluir";
   constructor(page: Page) {
     
     page.backgroundImage = "res://bg_app";
@@ -17,6 +19,5 @@ export class LocaisEntregaComponent {
 
   proximo(){
   }
-
 }
 
