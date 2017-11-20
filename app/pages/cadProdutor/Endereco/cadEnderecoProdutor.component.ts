@@ -6,6 +6,7 @@ import { EnderecoService } from "../../../shared/user/endereco.service";
 
 @Component({
   selector: "cadEnderecoProdutor",
+  providers: [EnderecoService],
   templateUrl:"pages/cadProdutor/Endereco/cadEnderecoProdutor.html",
   styleUrls:["pages/cadProdutor/Endereco/cadEnderecoProdutor.css"]
 })
