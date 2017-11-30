@@ -19,7 +19,7 @@ export const routes = [
   { path: "cadLocalEntrega", component: CadLocalEntregaComponent},
   { path: "locaisEntrega", component: LocaisEntregaComponent},
 
-  { path:"", component: LocaisEntregaComponent}
+  { path:"", component: CadLocalEntregaComponent}
 
   
 ];

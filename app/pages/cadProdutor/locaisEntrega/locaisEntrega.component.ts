@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {Page} from "ui/page";
 import {Endereco} from "../../../shared/user/endereco";
-import {Enderecos} from "../../../shared/user/enderecos";
+import { Config } from "../../../shared/config";
 
 @Component({
   selector: "locaisEntrega",
@@ -13,21 +13,15 @@ export class LocaisEntregaComponent {
 
   batata = "Concluir";
   heroes: Array<Object> = [];
-  groceryList: Array<Enderecos> = [];
-  constructor(page: Page,private groceryListService: GroceryListService) {
+  constructor(page: Page) {
     
     page.backgroundImage = "res://bg_app";
   }
   
   
-    ngOnInit() {
-      this.groceryListService.load()
-        .subscribe(loadedGroceries => {
-          loadedGroceries.forEach((groceryObject) => {
-            this.groceryList.unshift(groceryObject);
-          });
-        });
-    }
   proximo(){
+    console.log(Config.teste);
+    Config.teste="Teste2"
+    console.log("FINAL: "+Config.teste);
   }
 }

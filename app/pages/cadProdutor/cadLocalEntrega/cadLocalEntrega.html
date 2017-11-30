@@ -1,7 +1,7 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
-<StackLayout [formGroup]="endForm" novalidate>
+<StackLayout>
   <example-app></example-app>
-  <TextField formControlname="Apelido" hint="Apelido" [(ngModel)]="end.apelido" [ngModelOptions]="{standalone: true}"></TextField>
+  <TextField [(ngModel)]="end.apelido" [ngModelOptions]="{standalone: true}"></TextField>
   <cadEnderecoProdutor [end]="end"></cadEnderecoProdutor>
   <Button text="Teste" class="proximo" (tap)="proximo()"></Button>
   <Button text="Próximo" class="proximo" [nsRouterLink]="['/locaisEntrega']" (tap)="proximo()"></Button>

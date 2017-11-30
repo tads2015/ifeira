@@ -6,18 +6,16 @@
         
           <GridLayout row="0" columns="*, auto" class="add-bar">
             <TextField #groceryTextField hint="Enter a grocery item" col="0"></TextField>
-            <Image text="&#xf09a;" col="1"></Image>
+            <Image src="res://#xf067" col="1"></Image>
           </GridLayout>
         
-          <ListView [items]="groceryList" row="1" class="small-spacing">
+         <!-- <ListView [items]="groceryList" row="1" class="small-spacing">
             <ng-template let-item="item">
               <Label [text]="item.name" class="medium-spacing"></Label>
             </ng-template>
           </ListView>
-        
+        -->
+          <Button text="TESTE" class="proximo" (tap)="proximo()"></Button>        
+          <Button horizontalAlignment="right" [nsRouterLink]="['/cadLocalEntrega']" text="&#xf067;" class="fa mais" (tap)="proximo()"></Button>
         </GridLayout>
-  <!--    <Button horizontalAlignment="right" [nsRouterLink]="['/cadLocalEntrega']" text="&#xf067;" class="fa mais" (tap)="proximo()"></Button>
-    
-    <Button text="{{batata}}" class="proximo" (tap)="proximo()"></Button>
-  -->
 </StackLayout>

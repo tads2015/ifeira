@@ -3,10 +3,10 @@ import {NgModule } from "@angular/core";
 import {Page} from "ui/page";
 import {Router} from "@angular/router";
 import {stringify } from "@angular/core/src/util";
+import { Config } from "../../../shared/config";
 
 import {Data} from "../../../shared/user/data"
 import {Endereco} from "../../../shared/user/endereco";
-import {Enderecos} from "../../../shared/user/enderecos";
 import {CadEnderecoProdutorComponent} from "../Endereco/cadEnderecoProdutor.component";
 @Component({
   selector: "cadLocalEntrega",
@@ -17,7 +17,6 @@ import {CadEnderecoProdutorComponent} from "../Endereco/cadEnderecoProdutor.comp
 
 export class CadLocalEntregaComponent {
   end:Endereco;
-  ends: Enderecos[];
   data:Data[]=[];
   constructor(private page: Page, private router: Router) {
     this.end = new Endereco();
@@ -26,10 +25,9 @@ export class CadLocalEntregaComponent {
   }
 
   proximo(){
-    var x:string;
-    this.ends.push(
-    )
-  
+    console.log(Config.teste);
+    Config.teste="Teste1"
+    console.log("PRIME: "+Config.teste);
   }
 
   }

@@ -2,4 +2,6 @@
 export class Config {
     static apiUrl = "https://158.69.87.152:8000/"
     static token = "";
+    static teste:String;
+
 }
