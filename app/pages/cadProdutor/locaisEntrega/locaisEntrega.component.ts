@@ -20,8 +20,9 @@ export class LocaisEntregaComponent {
   
   
   proximo(){
-    console.log(Config.teste);
+  /*  console.log(Config.teste);
     Config.teste="Teste2"
     console.log("FINAL: "+Config.teste);
+    */
   }
 }

@@ -1,9 +1,9 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
-<StackLayout>
 <TextField hint="Cep" [(ngModel)]="end.cep" keyboardType="number"></TextField>
 <TextField hint="Bairro" [(ngModel)]="end.bairro"></TextField>
 <TextField hint="Localidade" [(ngModel)]="end.localidade"></TextField>
-<Button text="Pró" class="proximo" (tap)="proximo()"></Button>
+<StackLayout>
+    <Button text="Auto Preencher" class="proximo" (tap)="proximo()"></Button>
 </StackLayout>
 
   
