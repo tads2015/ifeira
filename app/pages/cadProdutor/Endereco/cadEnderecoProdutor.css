@@ -35,3 +35,7 @@ margin-right: 2;
 margin-left: 2; 
 width: 230;
 }
+ActivityIndicator {
+    position: absolute;
+    top: 200;
+}

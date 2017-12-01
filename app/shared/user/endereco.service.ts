@@ -14,9 +14,10 @@ export class EnderecoService {
   constructor(private http: Http){}
 
   buscaCEP(cep: String) {
-    return this.http.get("viacep.com.br/ws/" + cep + "/json/")
+    return this.http.get("https://viacep.com.br/ws/" + cep + "/json/")
+    .timeout(10000)
     .map(res => res.json())
-    .map(data => {
+    .do(data => {
       return data;
     })
     .catch(this.handleErrors);
