@@ -1,16 +1,11 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
 <StackLayout verticalAlignment="center">
-    
     <Label class="locais" text="Locais de Entrega: " ></Label>
-        <GridLayout rows="auto, *">
-      
-         <!-- <ListView [items]="groceryList" row="1" class="small-spacing">
+         <ListView [items]="groceryList" row="1" class="small-spacing">
             <ng-template let-item="item">
               <Label [text]="item.name" class="medium-spacing"></Label>
             </ng-template>
           </ListView>
-        -->
           <Button text="TESTE" class="proximo" (tap)="proximo()"></Button>        
           <Button horizontalAlignment="right" [nsRouterLink]="['/cadLocalEntrega']" text="&#xf067;" class="fa mais" (tap)="proximo()"></Button>
-        </GridLayout>
 </StackLayout>

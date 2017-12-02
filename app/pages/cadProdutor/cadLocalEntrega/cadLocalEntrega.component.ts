@@ -24,12 +24,9 @@ export class CadLocalEntregaComponent {
   }
 
   proximo(){
-    /*
-    console.log(Config.teste);
-    Config.teste="Teste1"
-    console.log("PRIME: "+Config.teste);
-    */
-    console.log("Array: "+UsuarioS.array);
+        UsuarioS.LEntrega.push(this.end);
+        UsuarioS.list.push({name : this.end.apelido});
+    console.log("Array: "+JSON.stringify(UsuarioS.LEntrega));
   }
 
   }

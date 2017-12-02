@@ -3,6 +3,5 @@
   <example-app></example-app>
   <TextField [(ngModel)]="end.apelido" [ngModelOptions]="{standalone: true}"></TextField>
   <cadEnderecoProdutor [end]="end"></cadEnderecoProdutor>
-  <Button text="Teste" class="proximo" (tap)="proximo()"></Button>
   <Button text="Próximo" class="proximo" [nsRouterLink]="['/locaisEntrega']" (tap)="proximo()"></Button>
 </StackLayout>

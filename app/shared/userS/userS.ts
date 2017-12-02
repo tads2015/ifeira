@@ -3,7 +3,8 @@ import {Endereco} from "../user/endereco";
 import { Observable } from "tns-core-modules/data/observable/observable";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
 export class UsuarioS{
-    static LEntrega:Endereco [];
-    static array = new ObservableArray(Endereco);
+    static LEntrega : Array<Object> = [];
+    static groceryList: Array<Object> = [];
+    static list: Array<Object> = [];
 }
     

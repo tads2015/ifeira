@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {Page} from "ui/page";
 import {Endereco} from "../../../shared/user/endereco";
 import { Config } from "../../../shared/config";
+import {UsuarioS} from "../../../shared/userS/userS"
 
 @Component({
   selector: "locaisEntrega",
@@ -10,19 +11,19 @@ import { Config } from "../../../shared/config";
 })
 
 export class LocaisEntregaComponent {
+  
+  groceryList: Array<Object> = [];
 
-  batata = "Concluir";
-  heroes: Array<Object> = [];
   constructor(page: Page) {
-    
     page.backgroundImage = "res://bg_app";
   }
-  
-  
+
+    ngOnInit() {
+      this.groceryList = UsuarioS.list;
+    }
+
   proximo(){
-  /*  console.log(Config.teste);
-    Config.teste="Teste2"
-    console.log("FINAL: "+Config.teste);
-    */
+    console.log("List: "+JSON.stringify(UsuarioS.list));
+    console.log("Grocery: "+JSON.stringify(this.groceryList));
   }
 }
