@@ -1,16 +1,10 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
-<StackLayout verticalAlignment="center">
-  <GridLayout rows="*" visibility="{{isLoading ? 'visible' : 'collapsed'}}">
-    <ActivityIndicator busy="{{ isLoading }}" width="50" height="50"></ActivityIndicator>
-  </GridLayout>
-  <TextField hint="CEP" keyboardType="number" [(ngModel)]="endereco.cep" (ngModelChange)="buscaCEP()" maxLength="8"></TextField>
-  <TextField hint="Logradouro" [(ngModel)]="endereco.logradouro" [ngModel]="endereco.logradouro"></TextField>
-  <StackLayout class="stack" orientation="horizontal" width="auto" height="auto">
-    <TextField class="num" hint="Número" keyboardType="number" [(ngModel)]="endereco.numero" ></TextField>
-    <TextField class="complemento" hint="Complemento" [(ngModel)]="endereco.complemento"></TextField>
-  </StackLayout>
-<TextField hint="Bairro" [(ngModel)]="endereco.bairro" [ngModel]="endereco.bairro"></TextField>
-<TextField hint="Cidade" [(ngModel)]="endereco.localidade" [ngModel]="endereco.localidade"></TextField>
-<TextField hint="Estado" [(ngModel)]="endereco.UF" [ngModel]="endereco.UF"></TextField>
-  <Button text="Próximo" [nsRouterLink]="['/cadLocalEntrega']" class="proximo" (tap)="proximo()"></Button>
+<TextField hint="Cep" [(ngModel)]="end.cep" keyboardType="number"></TextField>
+<TextField hint="Bairro" [(ngModel)]="end.bairro"></TextField>
+<TextField hint="Localidade" [(ngModel)]="end.localidade"></TextField>
+<StackLayout>
+    <Button text="Auto Preencher" class="proximo" (tap)="proximo()"></Button>
 </StackLayout>
+
+  
+  
