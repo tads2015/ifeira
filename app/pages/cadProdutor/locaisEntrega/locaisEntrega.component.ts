@@ -12,18 +12,41 @@ import {UsuarioS} from "../../../shared/userS/userS"
 
 export class LocaisEntregaComponent {
   
-  groceryList: Array<Object> = [];
+  ListaApelido: Array<Object> = [];
 
   constructor(page: Page) {
     page.backgroundImage = "res://bg_app";
   }
 
     ngOnInit() {
-      this.groceryList = UsuarioS.list;
+      this.ListaApelido = UsuarioS.apelido;
     }
 
-  proximo(){
-    console.log("List: "+JSON.stringify(UsuarioS.list));
-    console.log("Grocery: "+JSON.stringify(this.groceryList));
+  pop(){
+    this.ListaApelido.pop();
+    UsuarioS.apelido.pop();
+    UsuarioS.LEntrega.pop();
+    //console.log("List: "+JSON.stringify(UsuarioS.apelido));
+    console.log("Grocery: "+JSON.stringify(this.ListaApelido));
   }
+  shift(){
+    this.ListaApelido.shift();
+    UsuarioS.apelido.shift();
+    UsuarioS.LEntrega.shift();
+  }
+  splice(){
+    this.ListaApelido.splice(0,2);
+    UsuarioS.apelido.splice(0,2);
+    UsuarioS.LEntrega.splice(0,2);
+  }
+  /*Ontap(i:string,y:object){
+    var x: number;
+    console.log("Teste name:"+y);
+    console.log("Teste index:"+i);
+    x = this.ListaApelido.findIndex(y);
+    console.log(JSON.stringify(x));
+    /*this.ListaApelido.splice(x);
+    UsuarioS.apelido.splice(x);
+    UsuarioS.LEntrega.splice(x);
+  }*/
 }

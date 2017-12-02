@@ -18,7 +18,8 @@ export class CadEnderecoProdutorComponent {
     page.backgroundImage = "res://bg_app";
   }  
   proximo(){
-    this.end.cep = '120000';
+    this.end.apelido = 'IFPR'
+    this.end.cep = '120000'
     this.end.bairro = 'Area 2'
     this.end.localidade = 'Telemaco'
     console.log(JSON.stringify(this.end));

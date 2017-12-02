@@ -4,7 +4,6 @@ import { Observable } from "tns-core-modules/data/observable/observable";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
 export class UsuarioS{
     static LEntrega : Array<Object> = [];
-    static groceryList: Array<Object> = [];
-    static list: Array<Object> = [];
+    static apelido: Array<Object> = [];
 }
     

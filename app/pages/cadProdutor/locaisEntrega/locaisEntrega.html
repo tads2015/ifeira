@@ -1,11 +1,14 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
 <StackLayout verticalAlignment="center">
-    <Label class="locais" text="Locais de Entrega: " ></Label>
-         <ListView [items]="groceryList" row="1" class="small-spacing">
-            <ng-template let-item="item">
-              <Label [text]="item.name" class="medium-spacing"></Label>
-            </ng-template>
-          </ListView>
-          <Button text="TESTE" class="proximo" (tap)="proximo()"></Button>        
-          <Button horizontalAlignment="right" [nsRouterLink]="['/cadLocalEntrega']" text="&#xf067;" class="fa mais" (tap)="proximo()"></Button>
+  <Label class="locais" text="Locais de Entrega: " ></Label>
+    <ListView [items]="ListaApelido" row="1" class="small-spacing" >
+      <ng-template let-item="item">
+        <Label [text]="item.name" class="medium-spacing" (tap)="Ontap(index,item.name)"></Label>
+      </ng-template>
+    </ListView>
+  <Button horizontalAlignment="right" [nsRouterLink]="['/cadLocalEntrega']" text="&#xf067;" class="fa mais"></Button>
+  <Button text="Shift" class="proximo" (tap)="shift()"></Button>
+  <Button text="Pop" class="proximo" (tap)="pop()"></Button>
+  <Button text="Splice" class="proximo" (tap)="splice()"></Button>
+  
 </StackLayout>

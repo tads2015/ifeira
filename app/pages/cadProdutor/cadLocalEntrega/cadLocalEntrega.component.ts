@@ -25,8 +25,7 @@ export class CadLocalEntregaComponent {
 
   proximo(){
         UsuarioS.LEntrega.push(this.end);
-        UsuarioS.list.push({name : this.end.apelido});
-    console.log("Array: "+JSON.stringify(UsuarioS.LEntrega));
+        UsuarioS.apelido.push({name : this.end.apelido});
   }
 
   }
