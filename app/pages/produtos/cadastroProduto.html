@@ -1,4 +1,19 @@
-<ActionBar title="Cadastro de Produtos"></ActionBar>
-<StackLayout verticalAlignment="center">
-  <Label text="Cadastro de Produtos"></Label>
-</StackLayout>
+<ActionBar title="IFeira" class="action-bar"></ActionBar>
+<ScrollView>
+  <StackLayout verticalAlignment="center">
+    <TextField required hint="Descrição" [(ngModel)]="produto.descricao" class="desc" #element #elementModel="ngModel"></TextField>
+    <StackLayout class="stackNoStyle" orientation="horizontal" width="auto">
+      <TextField hint="Grupos" class="grp" [(ngModel)]="produto.grupo_id"></TextField>
+      <TextField keyboardType="number" hint="Validade" class="val" [(ngModel)]="produto.validade"></TextField>
+    </StackLayout>
+    <StackLayout class="stackNoStyle" orientation="horizontal" width="auto">
+      <TextField keyboardType="number" hint="Porções" class="grp" [(ngModel)]="produto.numero_porcoes"></TextField>
+      <TextField keyboardType="number" hint="Peso" class="val" [(ngModel)]="produto.peso"></TextField>
+    </StackLayout>
+    <TextField keyboardType="number" hint="Valor" [(ngModel)]="produto.valor"></TextField>
+    <Label text="Informações Adicionais"></Label>
+    <TextView height="150" class="txtview" [(ngModel)]="produto.infoadd">
+    </TextView>
+    <Button text="Concluir" class="concluir" (tap)="concluir()"></Button>
+  </StackLayout>
+</ScrollView>

@@ -1,0 +1,75 @@
+ActionBar {
+    background-color: #0F2A02;
+    margin-bottom: 0;
+}
+StackLayout {
+    margin-top: 30;
+    margin-left: 10;
+    margin-right: 10;
+    padding-bottom: 0;
+}
+TextField, TextView{
+    margin-top: 10;
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 10;
+    color: white;
+    placeholder-color: white;
+    font-size: 18;
+}
+
+/*val e grp fazem a estilização propria dos seus textfields para que 
+fiquem corretamente alinhados lado a lado no stakLayout="Horizontal"*/
+.val{
+    margin-left: 5;
+    margin-right: 0;
+    width: 132;
+}
+.grp{
+    margin-left: 18;
+    margin-right: 0;
+    width: 132;
+    color: white;
+    placeholder-color: white;
+    font-size: 18;
+}
+/**/
+
+
+
+/*Area de Texto*/
+.txtview {
+    background-color: #ffffff;
+    color: #000000;
+    padding-left: 5;
+}
+/**/
+
+/*Estiliza o rotulo de verificação de campos*/
+Label {
+    margin-top: 10;
+    margin-left: 16;
+    margin-right: 16;
+    color: white;
+    placeholder-color: white;
+    font-size: 14;
+}
+/**/
+
+/*Botao Concluir estila o botao de envio*/
+.concluir{
+    background-color: #ec6d23;
+    color: white;
+    margin-top: 10;
+    margin-left: 16;
+    margin-right: 16;
+    margin-bottom: 5;
+}
+
+/*Altera margem e padding do stackLayout*/
+.stackNoStyle {
+    padding-bottom: 0;
+    margin-top: 5;
+    margin-left: 0;
+}
+/**/

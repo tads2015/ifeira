@@ -1,5 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import {Page} from "ui/page";
+
+import {Endereco} from "../../../shared/user/endereco";
 
 @Component({
   selector: "cadEnderecoProdutor",
@@ -8,14 +10,17 @@ import {Page} from "ui/page";
 })
 
 export class CadEnderecoProdutorComponent {
-
+  @Input()
+  end : Endereco;
+  
   constructor(page: Page) {
+    this.end=new Endereco();
     page.backgroundImage = "res://bg_app";
-  }
-
+  }  
   proximo(){
-
+    this.end.cep = '2223';
+    console.log(JSON.stringify(this.end));
   }
+}
 
-  }
 

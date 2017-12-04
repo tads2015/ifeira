@@ -1,5 +1,6 @@
 export class Endereco {
     id: number;
+    apelido: string;
     cep: string;
     logradouro: string;
     complemento: string;
@@ -7,4 +8,5 @@ export class Endereco {
     localidade: string;
     UF: string;
     unidade: string;
+    
 }
