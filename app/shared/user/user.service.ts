@@ -51,6 +51,7 @@ export class UserService {
 
   saveToken(token: String){
     console.log(token);
+    Config.token=token;
     this.database.execSQL("INSERT INTO usuario (token) VALUES (?)", [token]).then(id => {
       console.log("INSERT RESULT", id);
   }, error => {
