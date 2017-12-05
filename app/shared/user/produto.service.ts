@@ -31,7 +31,7 @@ export class ProdutoService {
         let headers = new Headers();
     
         headers.append("Content-Type", "application/json");
-        //headers.append("Authorization",);
+        headers.append("Authorization", Config.token);
 
         return this.http.post(
           Config.apiUrl + "/api/produtos",
