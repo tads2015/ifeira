@@ -18,35 +18,18 @@ export class LocaisEntregaComponent {
     page.backgroundImage = "res://bg_app";
   }
 
-    ngOnInit() {
-      this.ListaApelido = UsuarioS.apelido;
-    }
-
+  ngOnInit() {
+    this.ListaApelido = UsuarioS.LEntrega;
+  }
+/*
   pop(){
-    this.ListaApelido.pop();
-    UsuarioS.apelido.pop();
     UsuarioS.LEntrega.pop();
-    //console.log("List: "+JSON.stringify(UsuarioS.apelido));
-    console.log("Grocery: "+JSON.stringify(this.ListaApelido));
   }
   shift(){
-    this.ListaApelido.shift();
-    UsuarioS.apelido.shift();
     UsuarioS.LEntrega.shift();
-  }
-  splice(){
-    this.ListaApelido.splice(0,2);
-    UsuarioS.apelido.splice(0,2);
-    UsuarioS.LEntrega.splice(0,2);
-  }
-  /*Ontap(i:string,y:object){
-    var x: number;
-    console.log("Teste name:"+y);
-    console.log("Teste index:"+i);
-    x = this.ListaApelido.findIndex(y);
-    console.log(JSON.stringify(x));
-    /*this.ListaApelido.splice(x);
-    UsuarioS.apelido.splice(x);
-    UsuarioS.LEntrega.splice(x);
   }*/
+  Onclick(event){
+    UsuarioS.LEntrega.splice(event.index,1);
+    //this.ListaApelido = UsuarioS.LEntrega;
+  }
 }
