@@ -1,18 +1,7 @@
 <ActionBar title="IFeira" class="action-bar"></ActionBar>
-<StackLayout verticalAlignment="center">
-    
-  <TextField hint="Cep" [(ngModel)]="endereco.Cep" keyboardType="number" ></TextField>
-  <TextField hint="Endereço" [(ngModel)]="endereco.endereco" ></TextField>
-  
-  <StackLayout class="stack" orientation="horizontal" width="auto" height="auto">
-    <TextField class="num" hint="Número" keyboardType="number" ></TextField>
-    <TextField class="complemento" hint="Complemento"  [(ngModel)]="endereco.complemento"      ></TextField>
-  </StackLayout>
-
-<TextField hint="Bairro" [(ngModel)]="endereco.Bairro"></TextField>
-<TextField hint="Cidade" [(ngModel)]="endereco.Cidade"></TextField>
-<TextField hint="Estado" [(ngModel)]="endereco.Estado"></TextField>
-
-  <Button text="Próximo" [nsRouterLink]="['/locaisEntrega']" class="proximo" (tap)="proximo()"></Button>
-  
+<StackLayout>
+  <example-app></example-app>
+  <TextField hint="Apelido" [(ngModel)]="end.apelido" [ngModelOptions]="{standalone: true}"></TextField>
+  <cadEnderecoProdutor [end]="end"></cadEnderecoProdutor>
+  <Button text="Adicionar Local" class="proximo" [nsRouterLink]="['/locaisEntrega']" (tap)="proximo()"></Button>
 </StackLayout>
