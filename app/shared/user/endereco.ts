@@ -1,5 +1,6 @@
 export class Endereco {
     id: number;
+    apelido: string;
     cep: string;
     logradouro: string;
     complemento: string;

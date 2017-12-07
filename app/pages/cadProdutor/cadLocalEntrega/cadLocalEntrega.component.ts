@@ -7,7 +7,7 @@ import { Config } from "../../../shared/config";
 
 import {UsuarioS} from "../../../shared/userS/userS"
 import {Endereco} from "../../../shared/user/endereco";
-import {CadEnderecoProdutorComponent} from "../Endereco/cadEnderecoProdutor.component";
+import {BuscaCepComponent} from "../BuscaCep/BuscaCep.component";
 @Component({
   selector: "cadLocalEntrega",
   templateUrl:"pages/cadProdutor/cadLocalEntrega/cadLocalEntrega.html",

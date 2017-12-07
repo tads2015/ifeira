@@ -1,0 +1,13 @@
+<ActionBar title="IFeira" class="action-bar"></ActionBar>
+  <GridLayout rows="*" visibility="{{isLoading ? 'visible' : 'collapsed'}}">
+    <ActivityIndicator busy="{{ isLoading }}" width="50" height="50"></ActivityIndicator>
+  </GridLayout>
+  <TextField hint="CEP" keyboardType="number" [(ngModel)]="endereco.cep" (ngModelChange)="buscaCEP()" maxLength="8"></TextField>
+  <TextField hint="Logradouro" [(ngModel)]="endereco.logradouro"></TextField>
+  <StackLayout class="stack" orientation="horizontal" width="auto" height="auto">
+    <TextField class="num" hint="Número" keyboardType="number" [(ngModel)]="endereco.numero" ></TextField>
+    <TextField class="complemento" hint="Complemento" [(ngModel)]="endereco.complemento"></TextField>
+  </StackLayout>
+<TextField hint="Bairro" [(ngModel)]="endereco.bairro" ></TextField>
+<TextField hint="Cidade" [(ngModel)]="endereco.localidade" ></TextField>
+<TextField hint="Estado" [(ngModel)]="endereco.UF"></TextField>

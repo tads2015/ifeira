@@ -3,8 +3,8 @@ import { Page } from "ui/page";
 //import { ActivityIndicator } from "tns-core-modules/ui/activity-indicator";
 import * as activityIndicatorModule from "tns-core-modules/ui/activity-indicator";
 
-import { Endereco } from "../../../shared/user/endereco";
-import { EnderecoService } from "../../../shared/user/endereco.service";
+import { Endereco } from "../../shared/user/endereco";
+import { EnderecoService } from "../../shared/user/endereco.service";
 
 @Component({
   selector: "cadEnderecoProdutor",
@@ -23,7 +23,7 @@ export class CadEnderecoProdutorComponent {
     page.backgroundImage = "res://bg_app";
   }
   proximo(){
-    console.log("Result CadEnderecoProdutor:"+JSON.stringify(this.endereco))
+
   }
 
 }

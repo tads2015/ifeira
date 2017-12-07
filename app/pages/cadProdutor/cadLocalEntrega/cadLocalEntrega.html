@@ -2,6 +2,6 @@
 <StackLayout>
   <example-app></example-app>
   <TextField hint="Apelido" [(ngModel)]="end.apelido" [ngModelOptions]="{standalone: true}"></TextField>
-  <cadEnderecoProdutor [end]="end"></cadEnderecoProdutor>
+  <BuscaCep [endereco]="end"></BuscaCep>
   <Button text="Adicionar Local" class="proximo" [nsRouterLink]="['/locaisEntrega']" (tap)="proximo()"></Button>
 </StackLayout>
