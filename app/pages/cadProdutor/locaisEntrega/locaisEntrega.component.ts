@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import {Page} from "ui/page";
-import {Endereco} from "../../../shared/user/endereco";
 
 @Component({
   selector: "locaisEntrega",
@@ -9,9 +8,8 @@ import {Endereco} from "../../../shared/user/endereco";
 })
 
 export class LocaisEntregaComponent {
-  enderecos: Endereco[];
-  constructor(page: Page) {
 
+  constructor(page: Page) {
     page.backgroundImage = "res://bg_app";
   }
 

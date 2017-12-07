@@ -1,7 +1,8 @@
-<ActionBar title="IFeira" class="action-bar"></ActionBar>
+<ActionBar title="Cadastro de Produtos" class="action-bar"></ActionBar>
 <ScrollView>
   <StackLayout verticalAlignment="center">
     <TextField required hint="Descrição" [(ngModel)]="produto.descricao" class="desc" #element #elementModel="ngModel"></TextField>
+    <Label class="validation" [visibility]="elementModel.valid ? 'collapse' : 'visible'" text="Field is required" ></Label>
     <StackLayout class="stackNoStyle" orientation="horizontal" width="auto">
       <TextField hint="Grupos" class="grp" [(ngModel)]="produto.grupo_id"></TextField>
       <TextField keyboardType="number" hint="Validade" class="val" [(ngModel)]="produto.validade"></TextField>
@@ -14,6 +15,6 @@
     <Label text="Informações Adicionais"></Label>
     <TextView height="150" class="txtview" [(ngModel)]="produto.infoadd">
     </TextView>
-    <Button text="Concluir" class="concluir" (tap)="concluir()"></Button>
+    <Button text="Concluir" class="enviar" (tap)="enviar()"></Button>
   </StackLayout>
 </ScrollView>

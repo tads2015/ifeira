@@ -4,8 +4,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Config = (function () {
     function Config() {
     }
-    Config.apiUrl = "https://158.69.87.152:8000/";
+    Config.apiUrl = "http://158.69.87.152:8000/";
+    Config.token = "";
     return Config;
 }());
 exports.Config = Config;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY29uZmlnLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEscUVBQXFFO0FBQ3JFO0lBQUE7SUFHQSxDQUFDO0lBRlUsYUFBTSxHQUFHLDZCQUE2QixDQUFBO0lBRWpELGFBQUM7Q0FBQSxBQUhELElBR0M7QUFIWSx3QkFBTSIsInNvdXJjZXNDb250ZW50IjpbIi8vT2JqZXRvIHF1ZSBjb250ZW0gbyBsaW5rIGRlIG9uZGUgZXN0YSBzZW5kbyBob3N0ZWFkbyBvIGJhY2stZW5kaW5nLlxyXG5leHBvcnQgY2xhc3MgQ29uZmlnIHtcclxuICAgIHN0YXRpYyBhcGlVcmwgPSBcImh0dHBzOi8vMTU4LjY5Ljg3LjE1Mjo4MDAwL1wiXHJcbiAgICAvL3N0YXRpYyB0b2tlbiA9IFwiXCI7XHJcbn0iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY29uZmlnLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEscUVBQXFFO0FBQ3JFO0lBQUE7SUFHQSxDQUFDO0lBRlUsYUFBTSxHQUFHLDRCQUE0QixDQUFBO0lBQ3JDLFlBQUssR0FBVSxFQUFFLENBQUM7SUFDN0IsYUFBQztDQUFBLEFBSEQsSUFHQztBQUhZLHdCQUFNIiwic291cmNlc0NvbnRlbnQiOlsiLy9PYmpldG8gcXVlIGNvbnRlbSBvIGxpbmsgZGUgb25kZSBlc3RhIHNlbmRvIGhvc3RlYWRvIG8gYmFjay1lbmRpbmcuXHJcbmV4cG9ydCBjbGFzcyBDb25maWcge1xyXG4gICAgc3RhdGljIGFwaVVybCA9IFwiaHR0cDovLzE1OC42OS44Ny4xNTI6ODAwMC9cIlxyXG4gICAgc3RhdGljIHRva2VuOlN0cmluZyA9IFwiXCI7XHJcbn0iXX0=

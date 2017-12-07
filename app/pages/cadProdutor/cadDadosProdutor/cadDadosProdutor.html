@@ -5,10 +5,10 @@
  -->
  <MaskedTextField mask="000.000.000-00" [(ngModel)]="dados.cpf" keyboardType="phone" (textChange)="cpf($event)"></MaskedTextField>
  <Label text="{{dados.cpf}}"></Label>
-  <TextField hint="Nome"        [(ngModel)]="dados.nome" ></TextField>
-  <TextField hint="Telefone"           keyboardType="phone"  [(ngModel)]="dados.telefone"></TextField>
-  <TextField hint="E-mail"             keyboardType="email" [(ngModel)]="dados.email"></TextField>
-  <TextField hint="Senha"              secure="true" [(ngModel)]="dados.senha"></TextField>
+ <TextField hint="Nome"        [(ngModel)]="dados.nome" ></TextField>
+  <TextField hint="Telefone"    keyboardType="phone"  [(ngModel)]="dados.telefone"></TextField>
+  <TextField hint="E-mail"      keyboardType="email" [(ngModel)]="dados.email"></TextField>
+  <TextField hint="Senha"       secure="true" [(ngModel)]="dados.senha"></TextField>
   <TextField hint="Confirme sua senha" secure="true"></TextField>
   
 

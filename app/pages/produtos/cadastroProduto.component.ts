@@ -19,12 +19,20 @@ export class CadastroProdutoComponent{
   constructor(private produtoService: ProdutoService, private page: Page, private router: Router) {
     this.produto = new Produto();
     page.backgroundImage = "res://bg_app";
-    //page.actionBarHidden = false;
   }
 
-  concluir(){
-    console.log("Teste");
-    console.log(JSON.stringify(this.produto));
+  enviar(){
+    this.produtoService.cadastroProdutos(this.produto)
+    .subscribe(
+      (data) => {
+        console.log(JSON.stringify(data));
+        this.produtoService.saveProdutos(data.jwt);
+      },
+      (err) => {
+        console.log(err);
+        alert("erro");
+      }
+    );
   }
 
   validade(){

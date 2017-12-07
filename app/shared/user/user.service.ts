@@ -30,9 +30,10 @@ export class UserService {
     let headers = new Headers();
 
     headers.append("Content-Type", "application/json");
-
+    console.error(Config.apiUrl + "api/auth/login");
+    console.log(JSON.stringify(user));
     return this.http.post(
-      Config.apiUrl + "user/login",
+      Config.apiUrl + "api/auth/login",
       JSON.stringify(user),
       {headers: headers}
     )
@@ -51,6 +52,7 @@ export class UserService {
 
   saveToken(token: String){
     console.log(token);
+    Config.token=token;
     this.database.execSQL("INSERT INTO usuario (token) VALUES (?)", [token]).then(id => {
       console.log("INSERT RESULT", id);
   }, error => {

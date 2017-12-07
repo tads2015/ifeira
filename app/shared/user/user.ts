@@ -1,8 +1,8 @@
 //*****import { Endereco } from "./endereco";*/
 //Objeto user
 export class User {
-    email: string = "josetreswe@hotmail.com";
-    senha: string = "senha";
+    email: string = "jhonathanldp@outlook.com";
+    password: string = "senhaforte";
     /*
     id: string;
     telefone: string;

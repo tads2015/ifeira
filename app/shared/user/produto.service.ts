@@ -15,9 +15,8 @@ export class ProdutoService {
 
     constructor(private http: Http){
         (new Sqlite("ifeira.db")).then(db => {
-            db.execSQL("CREATE TABLE IF NOT EXISTS produto (id INTEGER PRIMARY KEY AUTOINCREMENT, grupo_id INTEGER, descricao TEXT, validate DATE, numero_porcoes FLOAT, peso FLOAT, valor FLOAT, infoadd VARCHAR)").then(id => {
+            db.execSQL("CREATE TABLE IF NOT EXISTS produto (id INTEGER PRIMARY KEY AUTOINCREMENT, grupo_id INTEGER, descricao TEXT, validade DATE, numero_porcoes FLOAT, peso FLOAT, valor FLOAT, infoadd VARCHAR)").then(id => {
                 this.database = db;
-                console.log("LEGAL");
             }, error => {
                 console.log("CREATE TABLE ERROR", error);
             });
@@ -30,11 +29,13 @@ export class ProdutoService {
         this.saveProdutos(produto);
         let headers = new Headers();
     
+        
+
         headers.append("Content-Type", "application/json");
-        headers.append("Authorization", Config.token);
+        headers.append("Authorization: Bearer", Config.token);
 
         return this.http.post(
-          Config.apiUrl + "/api/produtos",
+          Config.apiUrl + "api/produto",
           JSON.stringify(produto),
           {headers: headers}
         )
@@ -53,7 +54,7 @@ export class ProdutoService {
     
       saveProdutos(produtos: Produto){
         console.log(produtos);
-        this.database.execSQL("INSERT INTO produto (grupo_id, descricao, validade, numero_porcoes, peso, valor, infoadd) VALUES (?,?,?,?,?,?,?,?)",
+        this.database.execSQL("INSERT INTO produto (grupo_id, descricao, validade, numero_porcoes, peso, valor, infoadd) VALUES (?,?,?,?,?,?,?)",
          [produtos.grupo_id, produtos.descricao, produtos.validade, produtos.numero_porcoes, produtos.peso, produtos.valor, produtos.infoadd]).then(id => {
           console.log("INSERT RESULT", id);
       }, error => {
