@@ -3,6 +3,8 @@ import {Page} from "ui/page";
 import {Router} from "@angular/router";
 import { Produto } from "../../shared/produtos/produto";
 import { ProdutoService } from "../../shared/user/produto.service";
+import { Config } from "../../shared/config";
+import { ErrosProduto } from "./errosProduto";
 
 @Component({
   selector: "cadProduto",
@@ -16,24 +18,34 @@ export class CadastroProdutoComponent{
   //date = new Date('2015-05-05');
 
  produto: Produto;
+ errosProduto: ErrosProduto;
   constructor(private produtoService: ProdutoService, private page: Page, private router: Router) {
     this.produto = new Produto();
+    this.errosProduto = new ErrosProduto();
     page.backgroundImage = "res://bg_app";
   }
 
   enviar(){
+    if(this.produto.descricao == ""){
+      this.errosProduto.descricao="Descrição não pode ser nula.";
+      return false;
+    }
+
+
     this.produtoService.cadastroProdutos(this.produto)
     .subscribe(
       (data) => {
         console.log(JSON.stringify(data));
-        this.produtoService.saveProdutos(data.jwt);
+      
+        //this.router.navigate(["/CadastroProduto"]);
       },
       (err) => {
         console.log(err);
-        alert("erro");
+        alert("Erro ao cadastrar produto");
       }
     );
-  }
+    }
+
 
   validade(){
   }

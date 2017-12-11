@@ -25,29 +25,34 @@ export class ProdutoService {
         });
       }
 
+
       cadastroProdutos(produto: Produto) {
         this.saveProdutos(produto);
-        let headers = new Headers();
-    
-        
+        let lista: Produto[]=[];
 
+        let headers = new Headers();
+        
+        lista.push(produto);
+
+        headers.append("Authorization", "Bearer" + Config.token);
         headers.append("Content-Type", "application/json");
-        headers.append("Authorization: Bearer", Config.token);
+        console.log("produtos:{"+JSON.stringify(lista)+"}");
+        
 
         return this.http.post(
           Config.apiUrl + "api/produto",
-          JSON.stringify(produto),
+          JSON.stringify(lista),
           {headers: headers}
         )
         .map(response => response.json())
         .do(data => {
-          console.log("Entrou");
+          return data;
         })
         .catch(this.handleErrors);
-      }
+    }
       //Tratamento de erros.
       handleErrors(error: Response) {
-        console.log("erro");
+        console.log("erro2");
         console.log(JSON.stringify(error.json()));
         return Observable.throw(error);
       }

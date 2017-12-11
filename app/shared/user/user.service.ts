@@ -50,7 +50,7 @@ export class UserService {
     return Observable.throw(error);
   }
 
-  saveToken(token: String){
+  saveToken(token){
     console.log(token);
     Config.token=token;
     this.database.execSQL("INSERT INTO usuario (token) VALUES (?)", [token]).then(id => {
