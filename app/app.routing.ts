@@ -11,7 +11,7 @@ import {LocaisEntregaComponent} from "./pages/cadProdutor/locaisEntrega/locaisEn
 
 export const routes = [
   //Path vazio para que a primeira pagina utilize LoginComponent.
- // { path: "", component: LoginComponent },
+  { path: "", component: LoginComponent },
   { path: "CadastroProduto", component: CadastroProdutoComponent },
 
   { path: "cadCpfProdutor", component: CadCpfProdutorComponent},
@@ -20,7 +20,7 @@ export const routes = [
   { path: "cadLocalEntrega", component: CadLocalEntregaComponent},
   { path: "locaisEntrega", component: LocaisEntregaComponent},
 
-  { path:"", component: LoginComponent}
+  //{ path: "", component: LocaisEntregaComponent}
 
   
 ];

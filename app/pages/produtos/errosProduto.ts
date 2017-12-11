@@ -1,3 +1,3 @@
 export class ErrosProduto{
-    descricao:string;
+    descricao:string = "";
 }

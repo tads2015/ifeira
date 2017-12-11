@@ -2,8 +2,6 @@
 <ScrollView>
   <StackLayout verticalAlignment="center">
     <TextField required hint="Descrição" [(ngModel)]="produto.descricao" class="desc" #element #elementModel="ngModel"></TextField>
-    <Label class="validation" [visibility]="elementModel.valid ? 'collapse' : 'visible'" text="Field is required" ></Label>
-    <Label class="validation" text="{{errosProduto.descricao}}" ></Label>
     <StackLayout class="stackNoStyle" orientation="horizontal" width="auto">
       <TextField hint="Grupos" class="grp" [(ngModel)]="produto.grupo_id"></TextField>
       <TextField keyboardType="number" hint="Validade" class="val" [(ngModel)]="produto.validade"></TextField>

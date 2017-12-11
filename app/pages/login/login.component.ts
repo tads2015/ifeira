@@ -21,7 +21,6 @@ export class LoginComponent {
     this.user = new User();
     page.backgroundImage = "res://bg_app";
   }
-  
   //Executa a função de validação de usuario dentro do user.service.ts
   login() {
     this.userService.login(this.user)

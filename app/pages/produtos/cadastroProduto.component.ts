@@ -15,6 +15,7 @@ import { ErrosProduto } from "./errosProduto";
 
 export class CadastroProdutoComponent{
 
+  
   //date = new Date('2015-05-05');
 
  produto: Produto;
@@ -27,8 +28,8 @@ export class CadastroProdutoComponent{
 
   enviar(){
     if(this.produto.descricao == ""){
-      this.errosProduto.descricao="Descrição não pode ser nula.";
-      return false;
+      alert("Erro ao cad");
+      return;
     }
 
 
