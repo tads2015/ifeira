@@ -22,7 +22,7 @@ export const routes = [
   { path: "cadLocalEntrega", component: CadLocalEntregaComponent},
   { path: "locaisEntrega", component: LocaisEntregaComponent},
 
-  { path: "", component: CadEnderecoProdutorComponent}
+  { path: "", component: LoginComponent}
 
   
 ];
@@ -30,7 +30,6 @@ export const routes = [
 export const navigatableComponents = [
   LoginComponent,
   CadastroProdutoComponent,
-
   CadCpfProdutorComponent,
   CadDadosProdutorComponent,
   CadEnderecoProdutorComponent,

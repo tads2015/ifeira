@@ -1,18 +1,15 @@
-<ActionBar title="IFeira" class="action-bar"></ActionBar>
+<ActionBar title="IFeira - Cadastro de Produtor" class="action-bar"></ActionBar>
 <StackLayout verticalAlignment="center">
     
- <!-- <TextField hint="cpf" keyboardType="number" [(ngModel)]="dados.cpf" (textChange)="cpf($event)"></TextField>  
- -->
- <MaskedTextField mask="000.000.000-00" [(ngModel)]="dados.cpf" keyboardType="phone" (textChange)="cpf($event)"></MaskedTextField>
- <Label text="{{dados.cpf}}"></Label>
- <TextField hint="Nome"        [(ngModel)]="dados.nome" ></TextField>
-  <TextField hint="Telefone"    keyboardType="phone"  [(ngModel)]="dados.telefone"></TextField>
-  <TextField hint="E-mail"      keyboardType="email" [(ngModel)]="dados.email"></TextField>
-  <TextField hint="Senha"       secure="true" [(ngModel)]="dados.senha"></TextField>
-  <TextField hint="Confirme sua senha" secure="true"></TextField>
+ 
+  <TextField #cpfField hint="cpf somente números" [(ngModel)]="dados.cpf" (ngModelChange)="mascaraCPF()" maxLength="14"></TextField>
+  <!--<Label text="{{dados.cpf}}"></Label>  2way-->
+  <TextField hint="Nome"        [(ngModel)]="dados.nome" ></TextField>
+  <TextField hint="Telefone"           keyboardType="phone"  [(ngModel)]="dados.telefone"></TextField>
+  <TextField hint="E-mail"             keyboardType="email" [(ngModel)]="dados.email"></TextField>
+  <TextField hint="Senha"              secure="true" [(ngModel)]="dados.senha"></TextField>
+  <TextField hint="Confirme sua senha" secure="true" [(ngModel)]="senha"></TextField>
   
 
-  <Button text="Próximo" [nsRouterLink]="['/cadEnderecoProdutor']" class="proximo" (tap)="proximo()"></Button>
   <Button text="Próximo" class="proximo" (tap)="proximo()"></Button>
-  
 </StackLayout>

@@ -10,5 +10,5 @@
     <Button horizontalAlignment="left" text="&#xf09a;" class="fa facebook" (tap)="submit2()"></Button>
     <Button horizontalAlignment="right" text="&#xf1a0;" class="fa google" (tap)="submit3()"></Button>
   </StackLayout>
-  <Label text="Cadastre-se" class="cadastre-se" (tap)="submit4()"></Label>
+  <Label text="Cadastre-se" class="cadastre-se" [nsRouterLink]="['/cadDadosProdutor']" (tap)="submit4()"></Label>
 </StackLayout>

@@ -10,14 +10,11 @@ import {Router} from "@angular/router";
 })
 
 export class CadCpfProdutorComponent {
-
   constructor(page: Page, private router: Router) {
     page.backgroundImage = "res://bg_app";
   }
-
   proximo(){
     
   }
-
-  }
+}
 

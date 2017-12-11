@@ -6,7 +6,7 @@ StackLayout {
     margin-right: 30;
     padding-bottom: 15;
 }
-TextField, MaskedTextField {
+TextField{
     margin-top: 10;
     margin-left: 16;
     margin-right: 16;
