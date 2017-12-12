@@ -27,7 +27,7 @@ export class CadDadosProdutorComponent {
   constructor(page: Page, private router: Router, private dadosProdutorService: DadosProdutorService) {
     page.backgroundImage = "res://bg_app";
     this.dados = new DadosProdutor();
-    this.senha = "1234";
+    this.senha = "senha";
   } 
 
   mascaraCPF(){

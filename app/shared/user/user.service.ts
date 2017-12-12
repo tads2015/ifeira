@@ -32,7 +32,7 @@ export class UserService {
     headers.append("Content-Type", "application/json");
 
     return this.http.post(
-      Config.apiUrl + "user/login",
+      Config.apiUrl + "api/auth/login",
       JSON.stringify(user),
       {headers: headers}
     )
